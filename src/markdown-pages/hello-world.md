@@ -13,9 +13,7 @@ This is the first post made for testing and playing around.
 Aside from that, I want to share some of my knowledge and learnings
 with others and **_hopefully_** it will be beneficial to the readers.
 
-I really look forward to deploying this blog. :smile:
-
-
+I really look forward to deploying this blog.
 
 
 
