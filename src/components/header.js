@@ -1,12 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import icon from "../images/gatsby-icon.png"
+import icon from "../../public/icons/icon-48x48.png"
 
 const renderIcon = () => {
   return (
     <Link to="/">
-      <img src={icon} alt="logo" style={{ width: "5%", marginBottom: 0 }} />
+      <img src={icon} alt="logo" style={{wide: '50%'}} />
     </Link>
   )
 }

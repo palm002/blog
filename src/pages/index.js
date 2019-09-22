@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -27,21 +27,16 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="container">
-        {/* <h1>blg</h1> */}
+      <div className="">
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
             <div className="" key={node.id}>
               <BlogLink to={node.fields.slug}>
-                <BlogTitle>
-                  {node.frontmatter.title}
-                </BlogTitle>
+                <BlogTitle>{node.frontmatter.title}</BlogTitle>
               </BlogLink>
-              <BlogDate>
-                Published: {node.frontmatter.date}
-              </BlogDate>
-              <p style={{fontFamily: 'lato'}}>{node.excerpt}</p>
+              <BlogDate>Published: {node.frontmatter.date}</BlogDate>
+              <p style={{ fontFamily: "lato" }}>{node.excerpt}</p>
             </div>
           )
         })}
