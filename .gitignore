@@ -59,7 +59,7 @@ typings/
 public
 
 # Pass
-!public/index.html
+!*/index.html
 
 # Mac files
 .DS_Store
