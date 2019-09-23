@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# Pass
+!public/index.html
+
 # Mac files
 .DS_Store
 
@@ -67,6 +70,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-# Pass
-!public/index.html
