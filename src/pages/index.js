@@ -7,7 +7,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
-  text-decoration: none;
+  text-decoration: solid;
+  color: #6cd87a;
 `
 
 const BlogTitle = styled.h3`
@@ -28,6 +29,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div className="">
+        <br />
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (

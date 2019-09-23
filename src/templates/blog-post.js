@@ -7,17 +7,19 @@ const StyledText = styled.p`
   font-family: lato;
   font-weight: 300;
   font-size: medium;
+  color: #f5f5f5;
 `
 
+// background: #2196f3;
 const Button = styled.button`
-  background: #ff1744;
-  border-radius: 3px;
+  background: #dbbea1;
   color: white;
-  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin-bottom: 5px;
   font-family: open sans;
   font-weight: bold;
   float: right;
-  margin-bottom: 5px;
+
 `
 
 export default ({ data }) => {
@@ -25,17 +27,13 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="">
-        <div className="">
-          <h2 style={{display: 'inline'}}>
-            {post.frontmatter.title}
-          </h2>
+        <div style={{ padding: `0.5rem 0.5rem` }}>
+          <h2 style={{ display: "inline", color: "#dbbea1" }}>{post.frontmatter.title}</h2>
           <Link to="/">
-            <Button>Back</Button>
+            <Button className="btn">Back</Button>
           </Link>
         </div>
-        <div className="">
-          
-        </div>
+        <div className=""></div>
       </div>
       <StyledText>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

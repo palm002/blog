@@ -4,7 +4,7 @@ date: "9-07-2019"
 description: "My first post."
 ---
 
-<img alt="Green forest" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80" width="90%" />
+<img alt="Green forest" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80" />
 
 ---
 

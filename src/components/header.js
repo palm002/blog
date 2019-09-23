@@ -14,26 +14,25 @@ const renderIcon = () => {
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#2196f3`,
-      marginBottom: `1.45rem`,
+      background: `#1d1e18`,
     }}
   >
     <h1
       style={{
         margin: `0 4rem`,
-        maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        textAlign: `center`
       }}
     >
       <Link
         to="/"
         style={{
           color: `white`,
-          textDecoration: `none`,
+          textDecoration: `overline underline`,
         }}
       >
-        {/* {siteTitle} */}
-        {renderIcon()}
+        {siteTitle}
+        {/* {renderIcon()} */}
       </Link>
     </h1>
   </header>

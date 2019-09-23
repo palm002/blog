@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-html {
-  font-family: 'Roboto', sans-serif;
-}
 
 html {
   font-family: Lato, Open Sans, sans-serif;
@@ -45,14 +42,14 @@ progress {
 template {
   display: none;
 }
-a {
+/* a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
   outline-width: 0;
-}
+} */
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -258,6 +255,7 @@ h2 {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
+  font-weight: bold;
   line-height: 1.1;
 }
 h3 {

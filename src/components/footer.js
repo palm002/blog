@@ -24,7 +24,7 @@ const Footer = () => {
           target="_blank"
         >
           <i className="github">
-            <FaGithub size={48} />
+            <FaGithub size={48} color={'indigo'} />
           </i>
         </a>
         <a
@@ -33,7 +33,7 @@ const Footer = () => {
           target="_blank"
         >
           <i class="linkedin">
-            <FaLinkedin size={48} />
+            <FaLinkedin size={48} color={'blue'} />
           </i>
         </a>
         <a
@@ -42,7 +42,7 @@ const Footer = () => {
           target="_blank"
         >
           <i class="instagram">
-            <FaInstagram size={48} />
+            <FaInstagram size={48} color={'purple'} />
           </i>
         </a>
       </Icon>

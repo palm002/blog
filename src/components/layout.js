@@ -29,11 +29,12 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        className="ui"
+        className=""
         style={{
-          margin: `0 4rem`,
-          padding: `0px 1.0875rem 1.45rem`,
+          padding: `0px 4rem`,
           paddingTop: 0,
+          paddingBottom: `1rem`,
+          background: `#8d6d52`
         }}
       >
         <main>{children}</main>
