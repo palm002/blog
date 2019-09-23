@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-family: Lato, Open Sans, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
