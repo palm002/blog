@@ -1,12 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import icon from "../../public/icons/icon-48x48.png"
+import icon from "../../public/icons/logo.png"
 
 const renderIcon = () => {
   return (
     <Link to="/">
-      <img src={icon} alt="logo" style={{wide: '50%'}} />
+      <img className="logo" src={icon} alt="logo" />
     </Link>
   )
 }
@@ -18,26 +18,24 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div
+    <h1
       style={{
         margin: `0 4rem`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {/* {siteTitle} */}
-          {renderIcon()}
-        </Link>
-      </h1>
-    </div>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        {/* {siteTitle} */}
+        {renderIcon()}
+      </Link>
+    </h1>
   </header>
 )
 

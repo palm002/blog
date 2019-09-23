@@ -37,6 +37,7 @@ export default ({ data }) => {
               </BlogLink>
               <BlogDate>Published: {node.frontmatter.date}</BlogDate>
               <p style={{ fontFamily: "lato" }}>{node.excerpt}</p>
+              <br />
             </div>
           )
         })}

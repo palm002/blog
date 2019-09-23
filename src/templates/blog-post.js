@@ -16,7 +16,7 @@ const Button = styled.button`
   padding: 0.5em 1em;
   font-family: open sans;
   font-weight: bold;
-  margin-top: 10px;
+  float: right;
   margin-bottom: 5px;
 `
 
@@ -26,14 +26,15 @@ export default ({ data }) => {
     <Layout>
       <div className="">
         <div className="">
-          <h2>
+          <h2 style={{display: 'inline'}}>
             {post.frontmatter.title}
           </h2>
-        </div>
-        <div className="">
           <Link to="/">
             <Button>Back</Button>
           </Link>
+        </div>
+        <div className="">
+          
         </div>
       </div>
       <StyledText>
