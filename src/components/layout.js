@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -26,6 +27,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <noscript>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+          <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+        </noscript>
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="ui"
         style={{
