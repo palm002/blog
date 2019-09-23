@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
@@ -11,7 +10,7 @@ const BlogLink = styled(Link)`
   color: #6cd87a;
 `
 
-const BlogTitle = styled.h3`
+const BlogTitle = styled.h2`
   margin-bottom: 5px;
   font-family: open sans;
   font-weight: 300;
