@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -29,22 +29,32 @@ const Layout = ({ children }) => {
     <>
       <Helmet>
         <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-          <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+            rel="stylesheet"
+          />
         </noscript>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div
+          className="ui"
+          style={{
+            margin: `0 4rem`,
+            padding: `0px 1.0875rem 1.45rem`,
+            paddingTop: 0,
+          }}
+        >
+          <main>{children}</main>
+          <Footer />
+        </div>
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="ui"
-        style={{
-          margin: `0 4rem`,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
     </>
   )
 }
