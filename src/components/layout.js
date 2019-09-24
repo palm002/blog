@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -34,12 +33,12 @@ const Layout = ({ children }) => {
           padding: `0px 4rem`,
           paddingTop: 0,
           paddingBottom: `1rem`,
-          background: `#8d6d52`
+          background: `#8d6d52`,
         }}
       >
-        <main>{children}</main>
-        <Footer />
+        <main style={{ minHeight: `100vh` }}>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }

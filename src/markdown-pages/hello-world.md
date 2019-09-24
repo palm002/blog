@@ -1,6 +1,6 @@
 ---
 title: "My first blog post"
-date: "9-07-2019"
+date: "2019-08-09"
 description: "My first post."
 ---
 

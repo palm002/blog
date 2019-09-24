@@ -3,18 +3,19 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
 import styled from "styled-components"
 
 const Icon = styled.i`
-  font-size: 1.5em;
-  width: 6em;
   cursor: pointer;
-  padding: 0.5em;
   margin: 0.5em 0 0.5em 0;
   position: relative;
+`
+
+const StyledFooter = styled.footer`
+  background: #dbbea1;
   text-align: center;
 `
 
 const Footer = () => {
   return (
-    <footer style={{ textAlign: "center" }}>
+    <StyledFooter>
       © {new Date().getFullYear()}, Mirko P.
       <br />
       <Icon>
@@ -22,31 +23,34 @@ const Footer = () => {
           className="github"
           href="https://www.github.com/palm002"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="github">
-            <FaGithub size={48} color={'indigo'} />
+            <FaGithub size={36} />
           </i>
         </a>
         <a
           className="linkedin"
           href="https://www.linkedin.com/in/pokrim"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <i class="linkedin">
-            <FaLinkedin size={48} color={'blue'} />
+          <i className="linkedin">
+            <FaLinkedin size={36} />
           </i>
         </a>
         <a
           className="instagram"
           href="https://www.instagram.com/pokrim"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <i class="instagram">
-            <FaInstagram size={48} color={'purple'} />
+          <i className="instagram">
+            <FaInstagram size={36} />
           </i>
         </a>
       </Icon>
-    </footer>
+    </StyledFooter>
   )
 }
 

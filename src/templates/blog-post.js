@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 
@@ -9,16 +9,6 @@ const StyledText = styled.p`
   font-size: large;
   color: #f5f5f5;
 `
-
-// const Button = styled.button`
-//   background: #dbbea1;
-//   color: white;
-//   border-radius: 3px;
-//   margin-bottom: 5px;
-//   font-family: open sans;
-//   font-weight: bold;
-//   float: right;
-// `
 
 export default ({ data }) => {
   const post = data.markdownRemark

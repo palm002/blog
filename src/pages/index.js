@@ -6,19 +6,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
-  text-decoration: solid;
-  color: #6cd87a;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline overline #3c9de1 solid;
+  }
 `
 
 const BlogTitle = styled.h2`
   margin-bottom: 5px;
   font-family: open sans;
-  font-weight: 300;
+  font-weight: bold;
+  color: #dbbea1;
 `
 
 const BlogDate = styled.h6`
   font-family: open sans;
-  color: red;
+  color: #dbbea1;
   font-weight: unset;
   font-style: italic;
 `
@@ -26,7 +29,7 @@ const BlogDate = styled.h6`
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Mirko Palancaji" />
       <div className="">
         <br />
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
@@ -37,8 +40,10 @@ export default ({ data }) => {
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
               </BlogLink>
               <BlogDate>Published: {node.frontmatter.date}</BlogDate>
-              <p style={{ fontFamily: "lato" }}>{node.excerpt}</p>
-              <br />
+              <p style={{ fontFamily: "lato", color: "#f5f5f5" }}>
+                {node.excerpt}
+              </p>
+              <hr />
             </div>
           )
         })}
