@@ -23,7 +23,7 @@ const NotFoundPage = () => (
         </div>
       </WarningColour>
       <br />
-      <p style={{ fontFamily: "lato", color: "#f5f5f5" }}>
+      <p style={{ fontFamily: "lato", color: "#2b2b2b" }}>
         You just hit a route that doesn&#39;t exist... the sadness.
       </p>
     </CenterContent>

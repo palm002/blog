@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           padding: `0px 4rem`,
           paddingTop: 0,
           paddingBottom: `1rem`,
-          background: `#8d6d52`,
+          backgroundColor: `#e0e0e0`,
         }}
       >
         <main style={{ minHeight: `100vh` }}>{children}</main>
@@ -48,3 +48,9 @@ Layout.propTypes = {
 }
 
 export default Layout
+// d8d8d8
+// 3. E5E5E5
+// f9f9f9
+// f8f9f9
+// 2. ededed
+// 1. e0e0e0

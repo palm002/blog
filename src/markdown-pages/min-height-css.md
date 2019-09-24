@@ -22,7 +22,7 @@ it just didn't sit right with me. I started reasearching why it
 was occuring -- initially I thought it will be fine eventually
 once I add more content, but then I started dwelling on it.
 
-Soon I became aware of a CSS property called `min-heigh`
+Soon I became aware of a CSS property called `min-height`
 so I started to play around with it to see what I could do.
 
 ### What I did to fix it

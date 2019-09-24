@@ -267,7 +267,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #2a3439;
   font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -407,7 +407,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: hsla(0, 0%, 0%, 0.09);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -595,11 +595,11 @@ td:last-child {
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.1);
-  /* background-color: #572d15; */
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0.3em;
+  padding-right: 0;
 }
 pre code {
   background: none;

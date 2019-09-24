@@ -7,7 +7,7 @@ const StyledText = styled.p`
   font-family: lato;
   font-weight: 300;
   font-size: large;
-  color: #f5f5f5;
+  color: #2b2b2b;
 `
 
 export default ({ data }) => {
@@ -15,7 +15,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h2 style={{ color: "#dbbea1" }}>{post.frontmatter.title}</h2>
+        <h2 style={{ color: "#2A3439" }}>{post.frontmatter.title}</h2>
       </div>
       <StyledText>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

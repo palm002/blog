@@ -16,12 +16,12 @@ const BlogTitle = styled.h2`
   margin-bottom: 5px;
   font-family: open sans;
   font-weight: bold;
-  color: #dbbea1;
+  color: #2a3439;
 `
 
 const BlogDate = styled.h6`
   font-family: open sans;
-  color: #dbbea1;
+  color: #2a3439;
   font-weight: unset;
   font-style: italic;
 `
@@ -40,7 +40,7 @@ export default ({ data }) => {
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
               </BlogLink>
               <BlogDate>Published: {node.frontmatter.date}</BlogDate>
-              <p style={{ fontFamily: "lato", color: "#f5f5f5" }}>
+              <p style={{ fontFamily: "lato", color: "#2b2b2b" }}>
                 {node.excerpt}
               </p>
               <hr />

@@ -4,12 +4,13 @@ import styled from "styled-components"
 
 const Icon = styled.i`
   cursor: pointer;
-  margin: 0.5em 0 0.5em 0;
   position: relative;
 `
 
 const StyledFooter = styled.footer`
-  background: #dbbea1;
+  background: #1f262a;
+  color: whitesmoke;
+  font-weight: bold;
   text-align: center;
 `
 
@@ -26,7 +27,7 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <i className="github">
-            <FaGithub size={36} />
+            <FaGithub size={36} color={"white"} />
           </i>
         </a>
         <a
@@ -36,7 +37,7 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <i className="linkedin">
-            <FaLinkedin size={36} />
+            <FaLinkedin size={36} color={"0077B5"} />
           </i>
         </a>
         <a
@@ -46,7 +47,7 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <i className="instagram">
-            <FaInstagram size={36} />
+            <FaInstagram size={36} color={"C13584"} />
           </i>
         </a>
       </Icon>
