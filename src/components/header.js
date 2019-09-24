@@ -15,7 +15,7 @@ const renderIcon = () => {
 const Header = () => (
   <header
     style={{
-      background: `#1F262A`,
+      background: `#1f262a`,
     }}
   >
     <h1

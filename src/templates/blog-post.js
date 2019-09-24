@@ -15,7 +15,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h2 style={{ color: "#2A3439" }}>{post.frontmatter.title}</h2>
+        <h2 style={{ color: "#2a3439" }}>{post.frontmatter.title}</h2>
       </div>
       <StyledText>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
