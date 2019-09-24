@@ -1,19 +1,12 @@
 ---
-title: "What Min height CSS property means"
+title: "Push the footer to the bottom"
 date: "2019-09-24"
-description: "What I learned while styling this blog with."
+# description: "What I learned while styling this blog."
 ---
 
 ![][css]
 
 ---
-
-### What is it?
-
-<blockquote class='quote'>
-    The min-height property defines the minimum height element of an element 
-</blockquote>
-    <cite>@anonymous</cite>
 
 ### The Problem
 
@@ -25,12 +18,21 @@ once I add more content, but then I started dwelling on it.
 Soon I became aware of a CSS property called `min-height`
 so I started to play around with it to see what I could do.
 
+### What is it?
+
+<blockquote class='quote'>
+    The min-height property defines the minimum height element of an element 
+</blockquote>
+    <cite>@anonymous</cite>
+
+
 ### What I did to fix it
 
 With that definition in mind from earlier, it means that if the 
 content is smaller than the minimum height the height will be applied.
 
 I added a style to the `<main>` tag.
+
 ```
 <main style={{minHeight: `100vh`}}> {content} </main>
 ```
