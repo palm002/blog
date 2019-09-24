@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Sanchez:400italic,400');
 html {
   font-family: Lato, Open Sans, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -446,6 +447,35 @@ blockquote {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: "Roboto", serif;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 100;
+}
+.quote {
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-left: 0.2em solid #3c9de1;
+  text-align: center;
+}
+.quote:before, .quote:after {
+  content: "\201C";
+  font-family: "Sanchez";
+  color: #3c9de1;
+}
+.quote:after {
+  content: "\201D";
+}
+cite {
+  font-family: "Lato", serif;
+  display: block;
+  font-weight: bold;
+  text-align: right;
+}
+cite:before {
+  font-weight: 100;
+  content: "\2014 ";
 }
 form {
   margin-left: 0;

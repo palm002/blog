@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
   text-decoration: none;
-  &:hover {
-    text-decoration: underline overline #3c9de1 solid;
-  }
-`
+  `
+    // &:hover {
+    //   text-decoration: underline overline #3c9de1 solid;
+    // }
 
 const BlogTitle = styled.h2`
   margin-bottom: 5px;

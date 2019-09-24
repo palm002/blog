@@ -10,10 +10,10 @@ description: "What I learned while styling this blog with."
 
 ### What is it?
 
->
-> The `min-height` property defines the minimum 
-> height element of an element - _W3SCHOOLS_
->
+<blockquote class='quote'>
+    The min-height property defines the minimum height element of an element 
+</blockquote>
+    <cite>@anonymous</cite>
 
 ### The Problem
 
