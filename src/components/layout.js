@@ -27,15 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className=""
-        style={{
-          padding: `0px 4rem`,
-          paddingTop: 0,
-          paddingBottom: `1rem`,
-          backgroundColor: `#e0e0e0`,
-        }}
-      >
+      <div className="base-layout">
         <main style={{ minHeight: `100vh` }}>{children}</main>
       </div>
       <Footer />
