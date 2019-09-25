@@ -1,7 +1,7 @@
 ---
-title: "Push the footer to the bottom"
+title: "Keeping the footer at the bottom of the page"
 date: "2019-09-24"
-# description: "What I learned while styling this blog."
+description: "What I learned while styling this blog."
 ---
 
 ![][css]

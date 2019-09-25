@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
-@import url('https://fonts.googleapis.com/css?family=Sanchez:400italic,400');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+@import url("https://fonts.googleapis.com/css?family=Sanchez:400italic,400");
 html {
   font-family: Lato, Open Sans, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -459,7 +459,8 @@ blockquote {
   border-left: 0.2em solid #3c9de1;
   text-align: center;
 }
-.quote:before, .quote:after {
+.quote:before,
+.quote:after {
   content: "\201C";
   font-family: "Sanchez";
   color: #3c9de1;
@@ -651,16 +652,17 @@ pre tt:after {
   margin-bottom: -0.3rem;
 }
 .base-layout {
-    padding: 0px 4rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    background-color: #e0e0e0;
+  padding: 0px 4rem;
+  padding-top: 0;
+  padding-bottom: 1rem;
+  background-color: #e0e0e0;
 }
-.nav-header{
+.nav-header {
   margin: 0 4rem;
   padding: 1.45rem 1.0875rem;
   text-align: center;
 }
+
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480
    1280-1024   - desktop (default grid)
@@ -668,20 +670,51 @@ pre tt:after {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  cite {
+    padding-bottom: 1rem;
+    font-size: x-large;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
 
-@media all and (min-width: 768px) and (max-width: 1024px) { }
-
-@media all and (min-width: 480px) and (max-width: 768px) { }
-
-@media all and (max-width: 480px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
   .base-layout {
-    padding: 0px 1rem;
+    padding: 0px 3rem;
     padding-bottom: 1rem;
   }
   .nav-header {
-    /* margin: 0 0rem; */
-    padding: .5rem .5rem;
+    padding: 0.7rem 1rem;
+  }
+  cite {
+    padding-bottom: 1rem;
+    font-size: larger;
+  }
+  blockquote {
+    padding-top: 0.2rem;
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: xx-large;
+  }
+  h3 {
+    font-size: x-large;
+    margin-bottom: 0.5rem;
+  }
+  pre {
+    margin-bottom: 1rem;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .base-layout {
+    padding: 0px 2rem;
+    padding-bottom: 1rem;
+  }
+  .nav-header {
+    padding: 0.7rem 1rem;
   }
   cite {
     padding-bottom: 1rem;
@@ -708,42 +741,80 @@ pre tt:after {
     margin-bottom: 1rem;
   }
   code {
+    font-size: medium;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .base-layout {
+    padding: 0px 1rem;
+    padding-bottom: 1rem;
+  }
+  .nav-header {
+    padding: 0.5rem 0.5rem;
+  }
+  cite {
+    padding-bottom: 1rem;
     font-size: smaller;
   }
- }
-
+  blockquote {
+    padding: 0;
+    padding-top: 0.2rem;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  h3 {
+    font-size: larger;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: medium;
+    margin-bottom: 1rem;
+  }
+  pre {
+    margin-bottom: 1rem;
+  }
+  code {
+    font-size: medium;
+  }
+}
 
 /* Portrait */
-@media screen and (orientation:portrait) { /* Portrait styles here */ }
+@media screen and (orientation: portrait) {
+  /* Portrait styles here */
+}
 /* Landscape */
-@media screen and (orientation:landscape) { /* Landscape styles here */ }
-
+@media screen and (orientation: landscape) {
+  /* Landscape styles here */
+}
 
 /* CSS for iPhone, iPad, and Retina Displays */
-
 /* Non-Retina */
 @media screen and (-webkit-max-device-pixel-ratio: 1) {
 }
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 /* iPhone Portrait */
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-} 
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
 
 /* iPhone Landscape */
-@media screen and (max-device-width: 480px) and (orientation:landscape) {
+@media screen and (max-device-width: 480px) and (orientation: landscape) {
 }
 
 /* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
+@media screen and (min-device-width: 481px) and (orientation: portrait) {
 }
 
 /* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
+@media screen and (min-device-width: 481px) and (orientation: landscape) {
 }

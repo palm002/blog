@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
   text-decoration: none;
-  `
-    // &:hover {
-    //   text-decoration: underline overline #3c9de1 solid;
-    // }
+`
+// &:hover {
+//   text-decoration: underline overline #3c9de1 solid;
+// }
 
 const BlogTitle = styled.h2`
   margin-bottom: 5px;
@@ -30,12 +30,14 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Mirko Palancaji" />
-      <div className="">
+      <div>
         <br />
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h4 style={{ fontWeight: `bold` }}>
+          {data.allMarkdownRemark.totalCount} Posts
+        </h4>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
-            <div className="" key={node.id}>
+            <div key={node.id}>
               <BlogLink to={node.fields.slug}>
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
               </BlogLink>

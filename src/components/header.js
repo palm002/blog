@@ -12,11 +12,6 @@ const renderIcon = () => {
   )
 }
 
-// style={{
-//   margin: `0 4rem`,
-//   padding: `1.45rem 1.0875rem`,
-//   textAlign: `center`,
-// }}
 const Header = () => (
   <header
     style={{
