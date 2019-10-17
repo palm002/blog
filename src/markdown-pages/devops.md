@@ -57,11 +57,11 @@ while working. Learning and exploring new technologies, best practices, optimizi
 already been built -- it all adds up in the end and helps me grow both skills and experience.
 
 
-<!-- ### A bit about me
+### A bit about me
 
 I work at Cognizant Australia and we are always looking for DevOps Engineers of
 all levels. If this is you or you want to move towardss DevOps, feel free to
-take a look on the job portals, or reach out via LinkedIn and I'll forward your CV. -->
+take a look on the job portals, or reach out via LinkedIn and I'll forward your CV.
 
 
 
