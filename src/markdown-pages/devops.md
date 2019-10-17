@@ -60,8 +60,8 @@ already been built -- it all adds up in the end and helps me grow both skills an
 ### A bit about me
 
 I work at Cognizant Australia and we are always looking for DevOps Engineers of
-all levels. If this is you or you want to move towardss DevOps, feel free to
-take a look on the job portals, or reach out via LinkedIn and I'll forward your CV.
+all levels. If this is you or you want to move towards DevOps, feel free to
+take a look on the job portals, or reach out via LinkedIn and I'll forward your CV to HR.
 
 
 
