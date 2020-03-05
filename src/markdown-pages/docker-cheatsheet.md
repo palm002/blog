@@ -1,7 +1,7 @@
 ---
 title: "Docker cheatsheet"
 date: "2020-02-25"
-description: "Docker cheetsheet"
+description: "Docker cheatsheet"
 ---
 
 ![][containers]
