@@ -50,6 +50,38 @@ Get objects using multiple selectors
 Get all resource objects using a selector (get all resources in prod environment)
 `kubectl get all --selector env=prod`
 
+Tainting nodes
+`kubectl taint nodes <node-name> key=value:taint-effect`
+
+Where taint-effect is one of `NoSchedule | PreferNoSchedule | NoExecute`
+*NoSchedule = the pods will not be scheduled on the node*
+*PreferNoSchedule = the sytem will try to avoid placing a pod on the node but not guaranteed*
+*NoExecute = new pods will not be scheduled on the node and existing pods (if any) will be evicted if they don't tolerate the taint*
+`kubectl taint nodes node1 app=blue:NoSchedule`
+
+Remove the taint with hey 'dedicated' and effect 'NoSchedule' if one exists
+`kubectl taint nodes foo dedicated:NoSchedule-`
+
+Remove all taints with key 'dedicated' from node foo
+`kubectl taint nodes foo dedicated-`
+
+Labeling nodes
+`kubectl label nodes <node-name> <label-key>=<label-value>`
+
+Extract object definition
+`kubectl get <object> <object-name> -o yaml > my-new-manifest.yaml`
+`kubectl get pod webapp1 -o yaml > my-new-pod.yaml`
+
+View DaemonSets
+`kubectl get daemonsets <name>`
+
+View events
+`kubectl get events`
+
+View scheduler logs
+`kubectl logs <name-of-scheduler> --namespace=<namespace>`
+`kubectl logs my-custom-scheduler --namespace=kube-system`
+
 
 
 
