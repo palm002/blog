@@ -82,7 +82,21 @@ View scheduler logs
 `kubectl logs <name-of-scheduler> --namespace=<namespace>`
 `kubectl logs my-custom-scheduler --namespace=kube-system`
 
+View metrics of nodes and pods
+`kubectl top node` `kubectl top pods`
 
+Update / Upgrade deployment
+`kubectl apply -f my-deployment-definition.yaml`
+
+View status of rollout
+`kubectl rollout status deployment/<deployment-name>`
+`kubectl rollout history deployment/myapp-deployment`
+
+Rollback / Undo rollouts
+`kubectl rollout undo deployment/<deployment-name>`
+
+ENV Variables
+`docker run -e APP_COLOR=pink simple-webapp-color`
 
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
