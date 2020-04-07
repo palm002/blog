@@ -161,7 +161,7 @@ Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl create secret generic my-secret --from-literal=DB_Host=mysql` `--from-literal=DB_Password=passwrd`
 
-**Also possible to reference a file with the data  of KV pairs**
+Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl create secret generic my-secret --from-file=<path-to-file>`
 
