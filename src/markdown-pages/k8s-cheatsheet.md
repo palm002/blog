@@ -72,9 +72,7 @@ Tainting nodes
 Where taint-effect is one of `NoSchedule | PreferNoSchedule | NoExecute`
 
 *NoSchedule = the pods will not be scheduled on the node* <br />
-
 *PreferNoSchedule = the sytem will try to avoid placing a pod on the node but not guaranteed* <br />
-
 *NoExecute = new pods will not be scheduled on the node and existing pods (if any) will be evicted if they don't tolerate the taint*
 
 `kubectl taint nodes node1 app=blue:NoSchedule`
@@ -132,6 +130,50 @@ Rollback / Undo rollouts
 ENV Variables
 <br />
 `docker run -e APP_COLOR=pink simple-webapp-color`
+
+Create ConfigMap
+<br />
+`kubectl create -f <configmap.yaml>` # declarative
+<br />
+`kubectl create configmap <config name> --from-literal=<key>=<value>` # imperative
+<br />
+`kubectl create configmap my-app-config --from-literal=APP_COLOR=blue --from-literal=APP_MODE=prod`
+
+Also possible to reference a file with the data  of KV pairs
+<br />
+`kubectl create configmap my-app-config --from-file=<path-to-file>`
+
+View ConfigMap
+<br />
+`kubectl get configmaps`
+
+Describe ConfigMaps
+<br />
+`kubectl describe configmaps`
+
+Create secret
+<br />
+`kubectl create -f <secret.yaml>` # declarative
+<br />
+`kubectl create secret generic` # imperative
+<br />
+`kubectl create secret generic <secret-name> --from-literal=<key>=<value>`
+<br />
+`kubectl create secret generic my-secret --from-literal=DB_Host=mysql` `--from-literal=DB_Password=passwrd`
+
+Also possible to reference a file with the data  of KV pairs
+<br />
+`kubectl create secret generic my-secret --from-file=<path-to-file>`
+
+View Secrets
+<br />
+`kubectl get secrets`
+<br />
+`kubectl describe secrets`
+
+View values from secrets
+<br />
+`kubectl get secret <secret-name> -o yaml`
 
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
