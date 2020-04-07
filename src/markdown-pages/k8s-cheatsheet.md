@@ -9,93 +9,128 @@ description: "Kubernetes cheatsheet"
 ---
 
 Create an object
+<br />
 `kubectl create -f replicaset-definition.yml`
 
 Show which resources are running
+<br />
 `kubectl get replicaset -o wide`
 
 Show all resources
+<br />
 `kubectl get all -o wide`
 
 Delete an object
+<br />
 `kubectl delete replicaset <name>`
 
 Replace/Update an object
+<br />
 `kubectl replace -f <filename.yml>`
 
 Scale an object (Imperative)
+<br />
 `kubectl scale -replicas=7 -f <filename.yml>`
 
 Show pods in a different namespace
+<br />
 `kubectl get pods -n <name>` or `kubectl get pods --namespace=<name>`
 
 List all pods in all namespaces
+<br />
 `kubectl get pods --all-namespaces`
 
 Create pods in another namespace (we can also add the namespace option to metadata of pod-definition.yaml but the namespace itself must exist)
+<br />
 `kubectl create -f pod-definition.yaml --namespace=<name>`
 
 To create a new namespace
+<br />
 `kubectl create namespace <name>`
 
 Switch to a different namespace permanently
+<br />
 `kubectl config set-context $(kubectl config current-context) --namespace=<name>`
 
 Get objects using a selector
+<br />
 `kubectl get pods --selector app=App1`
 
 Get objects using multiple selectors
+<br />
 `kubectl get pods --selector env=prod,bu=finance,tier=frontend` 
 
 Get all resource objects using a selector (get all resources in prod environment)
+<br />
 `kubectl get all --selector env=prod`
 
 Tainting nodes
+<br />
 `kubectl taint nodes <node-name> key=value:taint-effect`
+<br />
 
 Where taint-effect is one of `NoSchedule | PreferNoSchedule | NoExecute`
-*NoSchedule = the pods will not be scheduled on the node*
-*PreferNoSchedule = the sytem will try to avoid placing a pod on the node but not guaranteed*
+
+*NoSchedule = the pods will not be scheduled on the node* <br />
+
+*PreferNoSchedule = the sytem will try to avoid placing a pod on the node but not guaranteed* <br />
+
 *NoExecute = new pods will not be scheduled on the node and existing pods (if any) will be evicted if they don't tolerate the taint*
+
 `kubectl taint nodes node1 app=blue:NoSchedule`
 
 Remove the taint with hey 'dedicated' and effect 'NoSchedule' if one exists
+<br />
 `kubectl taint nodes foo dedicated:NoSchedule-`
 
 Remove all taints with key 'dedicated' from node foo
+<br />
 `kubectl taint nodes foo dedicated-`
 
 Labeling nodes
+<br />
 `kubectl label nodes <node-name> <label-key>=<label-value>`
 
 Extract object definition
+<br />
 `kubectl get <object> <object-name> -o yaml > my-new-manifest.yaml`
+<br />
 `kubectl get pod webapp1 -o yaml > my-new-pod.yaml`
 
 View DaemonSets
+<br />
 `kubectl get daemonsets <name>`
 
 View events
+<br />
 `kubectl get events`
 
 View scheduler logs
+<br />
 `kubectl logs <name-of-scheduler> --namespace=<namespace>`
+<br />
 `kubectl logs my-custom-scheduler --namespace=kube-system`
 
 View metrics of nodes and pods
+<br />
 `kubectl top node` `kubectl top pods`
 
 Update / Upgrade deployment
+<br />
 `kubectl apply -f my-deployment-definition.yaml`
 
 View status of rollout
+<br />
 `kubectl rollout status deployment/<deployment-name>`
+<br />
 `kubectl rollout history deployment/myapp-deployment`
 
 Rollback / Undo rollouts
+<br />
 `kubectl rollout undo deployment/<deployment-name>`
 
 ENV Variables
+<br />
 `docker run -e APP_COLOR=pink simple-webapp-color`
 
 
