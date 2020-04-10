@@ -175,5 +175,42 @@ Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl get secret <secret-name> -o yaml`
 
+**See all nodes** (shows k8s version on each node)
+<br />
+`kubectl get nodes`
+
+**Drain a node from workloads**
+<br />
+`kubectl drain node-1` 
+
+**Cordon a node** (mark the node as **unschedulable**)
+<br />
+`kubectl cordon node-2` # This command does NOT terminate/move pods. It just makes sure that new pods are not scheduled on that node
+
+**Uncordon a node**
+<br />
+`kubectl uncordon node-1`
+
+**Upgrading master node**
+<br />
+`apt-get/yum upgrade -y kubeadm=1.17.0-00`
+<br />
+`kubeadm upgrade plan`
+<br />
+`kubeadm upgrade apply v1.17.0`
+
+**Upgrade master kubelets**
+<br />
+`apt-get/yum upgrade -y kubelet=1.17.0-00` and restart the service post upgrade `systemctl restart kubelet`
+
+**Upgrade worker nodes one by one** (perform these steps for all nodes)
+
+1. drain the node (run this on master) `kubectl drain node-1`
+2. upgrade kubeadm (run this on worker node) `apt-get/yum upgrade -y kubeadm=1.17.0-00`
+3. upgrade kubelet (run this on worker node) `apt-get/yum upgrade -y kubelet=1.17.0-00`
+4. upgrade the node (run this on worker node) `kubeadm upgrade node config --kubelet-version v1.17.0`
+5. restart kubelet service (run this on worker node) `systemctl restart kubelet`
+6. unmark node 1 from being unschedulable (run this on master) `kubectl uncordon node-1`
+
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
