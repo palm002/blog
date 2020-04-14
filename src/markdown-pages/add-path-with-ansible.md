@@ -35,7 +35,7 @@ Using the `copy` module, we create a new file with `content` of the file being a
 command that adds Golang binary to `PATH`.
 
 Upon completion of the playbook, we can manually SSH into the machine and confirm that
-Golang binary is installed and useable by typing `go version` and checking it's
+Golang binary is installed and usable by typing `go version` and checking it's
 destination with `which go` in the command line.
 
 
