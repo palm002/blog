@@ -212,5 +212,45 @@ Also possible to reference a file with the data of KV pairs
 5. restart kubelet service (run this on worker node) `systemctl restart kubelet`
 6. unmark node 1 from being unschedulable (run this on master) `kubectl uncordon node-1`
 
+**Create a service account**
+<br />
+`kubectl create serviceaccount sa1`
+
+**List all service accounts**
+<br />
+`kubectl list serviceaccount`
+
+**View certificate signing requests (for admins only)**
+<br />
+`kubectl get csr`
+
+**Approve CSR (admins only)**
+<br />
+`kubectl certificate approve <name-of-csr>`
+
+**View the certificate (csr), get the `certificate` and decode it to plain text then share with end user**
+<br />
+`kubectl get csr -o yaml`
+<br />
+`echo "contentsOfCertificate hjkdfbabjdsjak" | base64 --decode`
+
+**View KubeConfig**
+<br />
+`kubectl config view` # lists clusters, contexts, users and current-context
+
+**View other KubeConfig files**
+<br />
+`kubectl config view --kubeconfig=my-custom-configs`
+
+**Swith to another Context (that's available within KubeConfig file)**
+<br />
+`kubectl config use-context <context-name>`
+<br />
+`kubectl config use-context prod-user@production` # verify if context switched using kubectl config view
+
+**Other KubeConfig cmds**
+<br />
+`kubectl config -h`
+
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
