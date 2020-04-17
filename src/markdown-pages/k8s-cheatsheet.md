@@ -252,5 +252,43 @@ Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl config -h`
 
+**Create roles & role bindings**
+<br />
+`kubectl create -f dev-role.yaml`
+
+`kubectl create -f dev-user-developer-binding.yaml`
+
+**View RBAC and Role bindings**
+<br />
+`kubectl get roles`
+<br />
+`kubectl get rolebindings`
+
+**View additional info about a role and role binding**
+<br />
+`kubectl describe role <rolename>`
+<br />
+`kubectl describe role binding <name-of-rolebinding>`
+
+**Check access (literally ask a question)**
+<br />
+`kubectl auth can-i create deployments`
+<br />
+`kubectl auth can-i delete nodes`
+<br />
+`kubectl auth can-i create deployments --as dev-user` # runs the command as another user
+<br />
+`kubectl auth can-i create pods --as dev-user --namespace test` # check if dev-user can create pods in test namespace
+
+**Create Cluster Role & Cluster Role Binding**
+<br />
+`kubectl create -f cluster-admin-role.yaml`
+<br />
+`kubectl create -f cluster-role-admin-role-binding.yaml`
+
+**Create a network policy**
+<br />
+`kubectl create -f policy-definition.yaml`
+
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
