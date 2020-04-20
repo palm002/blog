@@ -290,5 +290,22 @@ Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl create -f policy-definition.yaml`
 
+**Create & View Persistent Volume**
+<br />
+`kubectl create -f persistent-vol.yaml`
+<br />
+`kubectl get persistentvolume`
+
+**Create & View Persistent Volume Claims**
+<br />
+`kubectl create -f pvc-definition.yaml`
+<br />
+`kubectl get pvc` #shorthand for persistentvolumeclaim
+
+**Delete PVC**
+<br />
+`kubectl delete persistentvolumeclaim myclaim`
+
+
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
