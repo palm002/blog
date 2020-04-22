@@ -306,6 +306,13 @@ Also possible to reference a file with the data of KV pairs
 <br />
 `kubectl delete persistentvolumeclaim myclaim`
 
+**Create Ingress Resource**
+<br />
+`kubectl create -f ingress-resource.yaml`
+
+**View additional information in the ingress resource**
+<br />
+`kubectl describe ingress <name>`
 
 
 [k8s]: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
