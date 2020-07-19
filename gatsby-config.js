@@ -5,19 +5,19 @@ module.exports = {
     author: `Mirko Palancaji`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none'`,
+        head: `true`
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdowns`,
         path: `${__dirname}/src/markdown-pages`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none'`,
-        head: `true`
       },
     },
     {
